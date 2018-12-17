@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#SBATCH -Q
+#SBATCH -J norm_job_0
+#SBATCH --mem=1024
+#SBATCH --cpus-per-task=1
+
+module load FASTX-Toolkit/0.0.14-goolf-1.7.20
+fastq_to_fasta -r -n -i ../repetitions.fq > repet.fa

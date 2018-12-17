@@ -1,0 +1,76 @@
+### Optional Inputs ###
+
+# Options that influence how the adapters are found:
+adapter:
+  - TGGAATTCTCGGGTGCCAAGG
+  #- AAAAAA$
+  #- GGGGGG$
+#front:
+#  - CCCCCC
+#  - ^CCCCCC
+#anywhere:
+#  - GGGGGGG
+#errorRate: 0.1
+#noIndels: true
+#times: 2
+#overlap: 4
+#matchReadWildcards: true
+
+# PairedEnd options:
+#adapterPaired:
+#  - AAA$
+#  - GGG$
+#frontPaired:
+#  - CCCCCC
+#anywherePaired:
+#  - GGGGGGG
+
+# Options that influence what gets output to where:
+#quiet: true
+#infoFile: info.txt
+#restFile: rest.txt
+#wildcardFile: wildcard.txt
+#tooShortOutput: tooshort.txt
+#tooLongOutput: toolong.txt
+#untrimmedOutput: untrimmed.txt
+
+# Options for filtering of processed reads:
+#discardUntrimmed: true
+#discardTrimmed: true
+#noTrim: true
+#maskAdapter: true
+minimumLength: 4
+#maximumLength: 70
+#maxN: 1
+
+# Additional modifications to the reads:
+#bwa: true
+#stripF3: true
+#maq: true
+#trimN: true
+#noZeroCap: true
+#doubleEncode: true
+#colorspace: true
+#cut: -20
+#qualityCutoff: [5]
+#qualityBase: 5
+#prefix: PRE___
+#suffix: ___SUF
+#stripSuffix: GCA
+#lengthTag: "123"
+#untrimmedPairedOutput: untrimmedpaired.txt
+#cutPaired: 5
+#pairedOutput: cuttedFasta2
+
+# Misc:
+#format: .fasta does not work
+
+### Necessary Inputs ###
+inputFile:
+  class: File
+  # Path has to be relative to location of this yaml file
+  path: ../../testfiles_Aseq_cl/valid5p_fq2fa_ungzip.fa
+  #path: ../gzipOutTest.fq
+  #class: File
+  #path: ../fasta_test_cut_adapt_2.fa
+targetFileName: cutadapt_valid5p_fq2fa_ungzip.fa

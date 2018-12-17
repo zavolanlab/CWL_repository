@@ -1,0 +1,9 @@
+inputFile:
+  class: File
+  format: http://edamontology.org/format_1929
+  # Path has to be relative to location of this yaml file
+  path: ../../tests/testfiles_Aseq_cl/cutadapt_valid5p_fq2fa_ungzip.fa
+
+targetFileName: "revComp_cutadapt_valid5p_fq2fa_ungzip.fa"
+
+compress: false

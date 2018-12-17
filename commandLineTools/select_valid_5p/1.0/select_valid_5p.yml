@@ -1,0 +1,7 @@
+inputFile:
+  class: File
+  path: ../../tests/testfiles_Aseq_cl/fastq2fasta_ungzip.fa
+  format: edam:format_1929
+
+adapter: ....TTT
+targetFileName: valid5p_out.fa

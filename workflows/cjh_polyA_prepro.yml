@@ -1,0 +1,11 @@
+# Path to your local version of the PolyA Preprocessing pipeline
+path2localRepo: /home/christina/Work/CWL_projects/CWL_test_pAp
+# Infile (has to be .fq.gz, mandatory)
+fastqgz:
+  class: File
+  # Path has to be relative to location of this yaml file
+  path: ../tests/testfiles_Aseq_cl/A_seq_test.fq.gz
+
+# Optional arguments
+outFileName: #q2a_renamed_valid5p.fa
+adapter5p: #....TTT

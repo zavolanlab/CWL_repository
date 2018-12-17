@@ -1,0 +1,12 @@
+inputFile:
+  class: File
+  # Path has to be relative to location of this yaml file
+  path: ../../tests/testfiles_Aseq_cl/ungzip_fastq.fq
+
+rename: true
+keepUnknown: false
+#verbose: true
+#compress: true
+quality: true
+
+targetFileName: fastq2fasta_ungzip.fa

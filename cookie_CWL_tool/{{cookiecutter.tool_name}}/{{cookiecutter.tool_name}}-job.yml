@@ -1,0 +1,9 @@
+# Job file for {{cookiecutter.tool_name}}.cwl
+
+input1:
+  class: File
+  # Path has to be relative to location of this yaml file
+  path: {{cookiecutter.input_path}}
+#  format: http://edamontology.org/format_XXXX
+
+outfile_name: "{{cookiecutter.outfile_name}}"

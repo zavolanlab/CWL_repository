@@ -10,27 +10,28 @@ doc: |
 
 
 #hints:
-#  - class: SoftwareRequirement
-  ## List dependencies with short names
+#  SoftwareRequirement:
+   ## List dependencies with short names
 #    packages:
 #      Software name here:
 #        specs: ["Provide SciCrunch identifier for required software"]
 #        version: ["Include a list of versions that are known to work with this description"]
-
+#  ResourceRequirement:
+#    coresMin: 4
 
 requirements:
-  - class: DockerRequirement
+  DockerRequirement:
     dockerPull: {{cookiecutter.dockerPull}}
-#  - class: InlineJavascriptRequirement
+# InlineJavascriptRequirement: {}
 
 
 inputs:
   input1:
     type: File
-#    format: [edam:format_XXXX]
+#   format: [edam:format_XXXX]
     inputBinding:
       position: {{cookiecutter.input_position}}
-#      prefix: -i
+#     prefix: -i
     doc: |
       {{cookiecutter.input_doc}}
 
@@ -43,7 +44,7 @@ inputs:
 outputs:
   output1:
     type: stdout
-#    format: [edam:format_XXXX]
+#   format: [edam:format_XXXX]
 
 stdout: $(inputs.outfile_name)
 
@@ -65,7 +66,7 @@ $schemas:
 # METADATA
 # Cite the underlying tool
 s:mainEntity:
-  class: s:SoftwareSourceCode
+  - class: s:SoftwareSourceCode
   s:name: "{{cookiecutter.orig_software}}"
   s:about: >
     {{cookiecutter.orig_software_description}}
@@ -85,13 +86,13 @@ s:mainEntity:
 
 # Cite CWL
 s:isPartOf:
-  class: s:CreativeWork
+  - class: s:CreativeWork
   s:name: Common Workflow Language
   s:url: http://commonwl.org/
 
 # Identify yourself
 s:author:
-  class: s:Person
+  - class: s:Person
   s:name: {{cookiecutter.author}}
   s:email: {{cookiecutter.email}}
   ## If you have one, use unambiguous identifiers like ORCID
@@ -104,6 +105,10 @@ s:author:
     s:department:
     - class: s:Organization
       s:name: {{cookiecutter.lab}}
+
+#s:citation: xxxxx
+s:codeRepository: {{cookiecutter.repo}}
+s:dateCreated: {{cookiecutter.date}}
 
 # Include a license
 s:license: {{cookiecutter.license}}

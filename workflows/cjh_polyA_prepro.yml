@@ -4,7 +4,7 @@ path2localRepo: /home/christina/Work/CWL_projects/CWL_test_pAp
 fastqgz:
   class: File
   # Path has to be relative to location of this yaml file
-  path: ../tests/testfiles_Aseq_cl/A_seq_test.fq.gz
+  path: ../tests/testfiles_polya_prepro/A_seq_test.fq.gz
 
 # Optional arguments
 outFileName: #q2a_renamed_valid5p.fa

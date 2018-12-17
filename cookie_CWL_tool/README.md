@@ -9,6 +9,10 @@ You will be prompted for stuff like:
 - Metadata (authors, organisations, licences)
 - etc.
 
+These templates are following recommendations from the [CWL user guide](http://www.commonwl.org/user_guide/index.html) and [CWL recommended practices](http://www.commonwl.org/user_guide/rec-practices/).
+
+
+
 # How to
 1. [Install cookiecutter](https://cookiecutter.readthedocs.io/en/latest/installation.html)
 2. cd to destination folder

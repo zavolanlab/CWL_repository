@@ -64,7 +64,7 @@ outputs:
 
 steps:
   unzip_fastq:
-    run: ../commandLineTools/gnu_gzip/gnu_gzip.cwl
+    run: ../tools/gnu_gzip/1.3.12/gnu_gzip.cwl
     in:
       zipFile: fastqgz
       decompress:
@@ -74,7 +74,7 @@ steps:
     out: [zipResult]
 
   fastq_to_fasta:
-    run: ../commandLineTools/fastq_to_fasta/fastq_to_fasta.cwl
+    run: ../tools/fastq_to_fasta/0.0.14/fastq_to_fasta.cwl
     in:
       inputFile:
         source: unzip_fastq/zipResult
@@ -89,7 +89,7 @@ steps:
     out: [q2aResult]
 
   select_valid_5p:
-    run: ../commandLineTools/select_valid_5p/select_valid_5p.cwl
+    run: ../tools/select_valid_5p/1.0/select_valid_5p.cwl
     in:
       inputFile: fastq_to_fasta/q2aResult
       adapter:
@@ -102,7 +102,7 @@ steps:
     out: [valid5pResult]
 
   cutadapt:
-    run: ../commandLineTools/cutadapt/cutadapt.cwl
+    run: ../tools/cutadapt/1.8.3/cutadapt.cwl
     in:
       inputFile: select_valid_5p/valid5pResult
       adapter:
@@ -115,7 +115,7 @@ steps:
     out: [cutadapt_fasta_out]
 
   reverse_complement:
-    run: ../commandLineTools/fastx_reverse_complement/fastx_reverse_complement.cwl
+    run: ../tools/fastx_reverse_complement/0.0.14/fastx_reverse_complement.cwl
     in:
       inputFile: cutadapt/cutadapt_fasta_out
       compress:
@@ -126,7 +126,7 @@ steps:
     out: [reverse_complement_out]
 
   zip_fasta:
-    run: ../commandLineTools/gnu_gzip/gnu_gzip.cwl
+    run: ../tools/gnu_gzip/1.3.12/gnu_gzip.cwl
     in:
       zipFile: reverse_complement/reverse_complement_out
       decompress:

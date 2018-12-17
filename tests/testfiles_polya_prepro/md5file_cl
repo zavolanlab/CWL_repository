@@ -1,0 +1,7 @@
+bfa4453bacbc25b6f6c43a521d5849a3  A_seq_test.fq.gz
+31b4ea387de74a27b51323e629fd8f35  cutadapt_valid5p_fq2fa_ungzip.fa
+361f1f830b22a281deb35a20a927ab9a  fastq2fasta_ungzip.fa
+e209d1ce2e3e2c69b738377537a1ede4  revComp_cutadapt_valid5p_fq2fa_ungzip.fa
+57ab7f202ce0bccbcbd5e49f7ba4966a  revComp_cutadapt_valid5p_fq2fa_ungzip.fa.gz
+87ab3712ce3e57d4cc2e44851b9d0b00  ungzip_fastq.fq
+08765d7799bad487c1817b2d9dbc4583  valid5p_fq2fa_ungzip.fa

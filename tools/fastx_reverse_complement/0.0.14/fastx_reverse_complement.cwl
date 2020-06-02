@@ -84,5 +84,5 @@ $namespaces:
   edam: http://edamontology.org/
 
 $schemas:
- - https://schema.org/docs/schema_org_rdfa.html # Might need to pip install html5lib
+ - https://schema.org/version/latest/schema.rdf # Might need to pip install html5lib
  - http://edamontology.org/EDAM_1.18.owl
